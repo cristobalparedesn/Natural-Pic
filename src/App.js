@@ -1,6 +1,6 @@
 import "./index.css";
 
-import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 
 import Home from "./pages/Home"
@@ -10,16 +10,13 @@ export default function App() {
   const endpoint = "/fotos.json"
   return (
     <div className="App">
-      <BrowserRouter>
-        <h1>Natural Pic</h1>
-        <Navbar />
-
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/favoritos" element={<Favoritos />} />
-        </Routes>
-      </BrowserRouter>
-      
+      <h1>Natural Pic</h1>
+      <Navbar />
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favoritos" element={<Favoritos />} />
+          <Route path="*" element={<h1>Not Found 404</h1>} />
+      </Routes>
     </div>
   );
 }
