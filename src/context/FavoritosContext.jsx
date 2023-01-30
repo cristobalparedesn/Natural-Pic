@@ -6,8 +6,8 @@ export default function FavoritosProvider({children}){
 
   const [favoritos, setFavoritos] = useState([])
 
-  const adicionFavoritos = (alt) => {
-    setFavoritos([...favoritos, {alt}])
+  const adicionFavoritos = (info) => {
+    setFavoritos([...favoritos, info])
   }
 
   const eliminarFavoritos = (id) => {
